@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Phumon.net</title>
+    <meta name="description" content="profile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <header>
+            <nav>
+    
+                <img class="logo" src= "images/KhangMor.svg" alt="logo">
+                <div class="links">
+                    <a href="#"><%= About %></a>
+                    <a href="#"><%= Docs %></a>
+                    <button class="button_med" href="#"><%= Login %></button>
+                </div>
+            </nav>
+        </header>
+        <!-- Contents -->
+        <section class="info">
+            <h1 class="content_font1"><%=contentfont1 %></h1>
+            <h4 class="content_font2"><%=contentfont2 %></h4>
+            <% icons.forEach(function(icons){ %>
+                <div class="icons">
+                    <div class="icon">
+                        <img src= <%= icons.img %> alt="email">
+                        <p class="icon_info"><%= icons.info %></p>
+                    </div>
+                </div>
+
+                    <% }) %>
+                    <!-- 
+                    <div class="icon">
+                        <img src="image/facebook_1.svg" alt="facebook">
+                        <p class="icon_info">kceb thotsawat</p>
+                    </div>
+                    <div class="icon">
+                        <img src="image/youtube_1.svg" alt="youtube">
+                        <p class="icon_info">BeckGamerOnline</p>
+                    </div>    
+                    <div class="icon">
+                        <img src="image/twitter_1.svg" alt="twitter">
+                        <p class="icon_info">Kceb_00</p>
+                    </div>               
+                </div>
+            -->
+        </section>
+            <!-- Feature Bar -->
+        <section class="features">
+            <!-- Add Parameters that forEach loop -->
+            <% obj_feature.forEach(function(feature){ %>
+            <div class="feature">
+                <img src= <%= feature.img %> alt="programming">
+                <div class="feature_info">
+                    <p class="feature_top"><%= feature.top %></p>
+                    <p class="feature_bottom"><%= feature.bottom %></p>
+                </div>
+            </div>
+            <% }) %>
+            <!-- Comment not use
+            <div class="feature">
+                <img src="images/aiot.jpg" alt="aiot">
+                <div class="feature_info">
+                    <p class="feature_top">AIoT and Robotics</p>
+                    <p class="feature_bottom">Enjoy Coding and Playing
+                        Python, ROS, Mechanics</p>
+                </div>
+            </div>
+            -->
+            <div class="feature">
+                <div class="feature_info">
+                    <p class="feature_more"><%= LearnMore %></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
